@@ -1,0 +1,59 @@
+Part 2A
+Hello, my name is Benjamin Gonzales
+
+Part 2B
+my_name: Benjamin Gonzales <class 'str'>
+my_age: 19 <class 'int'>
+pi: 3.14 <class 'float'>
+longhorn_rule: Benjamin Gonzales 19 3.14 True <class 'str'>
+Pi rounded to 5 decimal places: 3.14159
+
+Part 2C
+IPython is command shell. Great for writing brief code and quuickly seeing the output.
+I will be 25 in 2028.
+I was 9 in 2012.
+(1+2) * (3+4) = 21
+(7+3)^2 * (2+3) = 500
+(2/3)*(4/5) = 0.5333333333333333
+The area of a 12in pizza is 118.43505273719998 sq in.
+my name is Benjamin Gonzales.
+The remainder of my age divided by 2 is 1
+The total energy of the weight is 34.5
+
+Part2D
+My age is  : 19
+My age as a float: 19.0
+A float contains decimal points!
+The square root of 36 is: 6.0
+e^3 + e^-2 is: 20.220872206424282
+The total energy is: 125.5
+
+Part 2E
+Hello!
+I am 19 years old
+Computing the kinetic energy... 500.0
+The kinetic energy is: 500.0
+The kenetic energy is: 22.5
+The potential energy is: 490.0
+And lastly, the total energy is : 512.5
+
+Part 2F
+I am 25: False
+It is less than or equal to: False
+The following values are greater than or equal to 5 and even:
+3: False
+4: False
+6: True
+7: False
+
+Part 2G
+even
+odd
+side c is equal to 5
+side c is less than 5
+side c is greater than 5
+The status of the bond for the following values is:
+r = 0.5: compressed
+r = 1.0: ideal
+r = 1.5: stretched
+r = 6.0: broken
