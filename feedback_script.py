@@ -132,7 +132,6 @@ test()
 
 # answers.txt
 # Can they have extra new lines?
-# How do I figure out their name?
 
 # syntax tips:
     # for each open parenthesi \"(\", you have a closing parenthesi \")\"
