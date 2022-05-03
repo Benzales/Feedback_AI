@@ -12,3 +12,5 @@ p = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=sub
 print(p.returncode)
 
 print("\nasd;lkfjdskf j"[1:])
+str = "\n"
+print(str[0:1] == "\n")
