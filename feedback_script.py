@@ -38,7 +38,7 @@ def cleared(expected, output):
     else:
         p_expected = "\"" + expected.strip() + "\""
         p_cur_line = "\"" + cur_line.strip()     + "\""
-    if(cur_line == expected):
+    if(match(cur_line, expected)):
         output = output[len(expected):]
         print("\tcleared. You successfully outputted", p_expected)
         return output

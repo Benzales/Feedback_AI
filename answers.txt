@@ -1,8 +1,8 @@
 Part 2A
-Hello, my name is [A-Za-z]+
+Hello, my name is [A-Z a-z]+
 
 Part 2B
-my_name: Benjamin Gonzales <class 'str'>
+my_name: [A-Z a-z]+ <class 'str'>
 my_age: 19 <class 'int'>
 pi: 3.14 <class 'float'>
 longhorn_rule: Benjamin Gonzales 19 3.14 True <class 'str'>
