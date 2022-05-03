@@ -10,7 +10,7 @@ Pi rounded to 5 decimal places: 3.14159
 
 Part 2C
 IPython is command shell. Great for writing brief code and quuickly seeing the output.
-I will be 25 in 2028.
+In 2028, I will be 25
 I was 9 in 2012.
 (1+2) * (3+4) = 21
 (7+3)^2 * (2+3) = 500
@@ -40,7 +40,6 @@ And lastly, the total energy is : 512.5
 Part 2F
 I am 25: False
 It is less than or equal to: False
-The following values are greater than or equal to 5 and even:
 3: False
 4: False
 6: True
@@ -52,7 +51,6 @@ odd
 side c is equal to 5
 side c is less than 5
 side c is greater than 5
-The status of the bond for the following values is:
 r = 0.5: compressed
 r = 1.0: ideal
 r = 1.5: stretched
