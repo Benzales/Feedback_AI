@@ -107,12 +107,14 @@ def test():
                 line_num = i
             elif line_num == -1:
                 found = True
-            i+=2 
+            i+=2
         
         error_line = lines[line_num + 1].strip()
         line_num = int(re.sub(", in.*", "", re.sub(".*, line ", "", lines[line_num])))
         # error_line, error_message, line_num
         # TODO handle error
+            # run-time
+            # syntax
         return
 
 
