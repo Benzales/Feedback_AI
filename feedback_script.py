@@ -59,6 +59,7 @@ def cleared(expected, output):
 def test():
     # TODO: fill in correct usr
     usr = "bgg646"
+    stored_answers = dict()
 
 
 
