@@ -28,9 +28,12 @@ def command_message(issue, commands):
 def ask_ray(issue):
     print(issue + ", but I'm not sure how to fix it so ask Ray.")
 
+def get_line(str):
+    index = str.find("\n")
+    return str if index == -1 else str[:index + 1]
+
 def cleared(expected, output):
-    # TODO handle new lines
-    cur_line = output[:len(expected) if len(output) >= len(expected) else len(output)]
+    cur_line = get_line(output)
     if(expected == "\n"):
         p_expected = "a blank line"
     if(cur_line == "\n"):
@@ -38,11 +41,14 @@ def cleared(expected, output):
     else:
         p_expected = "\"" + expected.strip() + "\""
         p_cur_line = "\"" + cur_line.strip()     + "\""
-    if(match(cur_line, expected)):
-        output = output[len(expected):]
-        print("\tcleared. You successfully outputted", p_expected)
+
+    if(match(expected, cur_line)):
+        output = output[len(cur_line):]
+        print("cleared. You successfully outputted", p_expected)
         return output
     else:
+        # TODO make regex expression human readable.
+            # consider using an array to store what the regex is supposed to represent
         print("\n\n" + p_expected + " must be printed.")
         print(p_cur_line + " is what you're printing\n\n")
         return False
@@ -73,7 +79,7 @@ def test():
         command_message("You have a directory nested inside of your directory", commands)
         return
     elif(match(correct_pwd, their_pwd)):
-        print("\tcleared. Your directories are looking good")
+        print("cleared. Your directories are looking good")
     else:   
         ask_ray("Your directories are messed up")
         return
