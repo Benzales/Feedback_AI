@@ -84,7 +84,6 @@ def test():
 
     # Check for syntax errors
     script_path = correct_pwd[0:len(correct_pwd) - 2] + "/Your_script/your_script.py"
-    
     p = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     o, e = p.communicate() 
     output, error = bytes_to_string(o, e)
