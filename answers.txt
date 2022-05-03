@@ -1,5 +1,5 @@
 Part 2A
-Hello, my name is Benjamin Gonzales
+Hello, my name is [A-Za-z]+
 
 Part 2B
 my_name: Benjamin Gonzales <class 'str'>
