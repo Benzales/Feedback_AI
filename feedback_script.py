@@ -131,7 +131,8 @@ test()
 # THEME: make scalable
 
 # answers.txt
-# Can they have extra new lines?
+# Can they have extra new lines
+# Should I get their name?
 
 # syntax tips:
     # for each open parenthesi \"(\", you have a closing parenthesi \")\"
