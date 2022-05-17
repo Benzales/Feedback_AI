@@ -9,5 +9,6 @@ TO-DO
 
 DONE
   > Implement regex codes to each answer to allow for a multitude of different answers. \
+  > Test Line \
   > Design a dictionary that maps a variable to its corresponding regex code. \ 
   > Enable AI to learn their answers to specifiy future answers. EX: their name. 
