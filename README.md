@@ -5,7 +5,7 @@ TO-DO
   > Allow for multiple personalized answer per line. \
   > Provide feedback and tips for when they have a syntax error. \
   > Scan their script to ensure they are using vars, loops, fucntions, etc and not just hardcoding the expected print lines. \
-  > Add a manual force bypass feature that skips over a mistake. \
+  > Add a manual force bypass feature that skips over a mistake.
 
 DONE
   > Implement regex codes to each answer to allow for a multitude of different answers. \
