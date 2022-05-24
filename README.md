@@ -8,7 +8,7 @@ TO-DO
   > Add a manual force bypass feature that skips over a mistake.
 
 DONE
-  > Implement regex codes to each answer to allow for a multitude of different answers. \
-  > Design a dictionary that maps a variable to its corresponding regex code. \
-  > Enable AI to learn their answers to specifiy future answers. EX: their name. \
-  > Allow for multiple personalized answer per line.
+  > Implemented regex codes to each answer to allow for a multitude of different answers. \
+  > Designed a dictionary that maps a variable to its corresponding regex code. \
+  > Enabled AI to learn their answers to specifiy future answers. EX: their name. \
+  > Allowed for multiple personalized answer per line.
