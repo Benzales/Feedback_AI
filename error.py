@@ -40,3 +40,6 @@ def handle_errors():
         return
     else:
         print("No errors")
+
+# syntax tips:
+    # for each open parenthesi \"(\", you have a closing parenthesi \")\"
