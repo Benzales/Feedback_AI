@@ -1,18 +1,11 @@
-#!/usr/bin/env python
+import paths
+import error
+import output
+import input
 
-import helper_functions as hf
-import sys
-import subprocess
-import re
-
-def test():
-    import paths
-    paths.check_directories()
-    
-    import error
-    error.handle_errors()    
-
-    import output
-    output.check_output()
-
-test()
+print()
+paths.check_directories()
+error.handle_errors()    
+output.check_output()
+input.check_input()
+print()

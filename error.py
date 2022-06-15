@@ -1,24 +1,16 @@
-import helper_functions as hf
-import subprocess
-import re
-
 def handle_errors():
-    usr = "bgg646"
-    correct_pwd = "/home/" + usr + "/lab0-part2"
-    script_path = correct_pwd + "/Your_script/your_script.py"
-    p = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    o, e = p.communicate() 
-    output, error = hf.bytes_to_string(o, e)
-    if(p.returncode == 1):
+    import help
+    if(help.p.returncode == 1):
         print("\n\nYou have an error in your code\n")
-        lines = re.split("\n", error)
+        import re
+        lines = re.split("\n", help.error)
         line_num = -1
         error_message = lines[len(lines) - 1]
         found = False
         i = 1
         regex = ".*" + script_path + ".*"
         while i < len(lines) and line_num == -1 and not found:
-            if hf.match(regex, lines[i]):
+            if help.match(regex, lines[i]):
                 line_num = i
             elif line_num == -1:
                 found = True
@@ -39,7 +31,7 @@ def handle_errors():
                 # parenthesis
         return
     else:
-        print("No errors")
+        print("No errors.")
 
 # syntax tips:
     # for each open parenthesi \"(\", you have a closing parenthesi \")\"

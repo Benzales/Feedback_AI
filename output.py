@@ -1,19 +1,12 @@
 def check_output():
-    # maps personal info keys to their respective regex patterns
-    stored_answers = dict()
-    f = open('/home/bgg646/feedback/stored_answers.txt', 'r')
-    import re
-    for line in f.readlines():
-        key, regex_value = re.split("~~~", line)
-        stored_answers[key] = (False, regex_value)
-
-    # Check their output
     # TODO unhardcode feedback paths
     f = open("/home/bgg646/feedback/answers.txt", 'r')
-    import helper_functions as hf
+    import help
     for line in f.readlines():
-        if not output:
+        if not help.output:
+            if len(help.output) == 0:
+                print("Your current output is acceptable, however you haven't outputted everything yet.")
             return
-        expected = line
-        output = hf.cleared(expected, output)
+        help.output = help.cleared(line, help.output)
     f.close()
+    print("Output is acceptable.")

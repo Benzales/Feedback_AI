@@ -1,5 +1,5 @@
+# helper methods
 import re
-
 def match(regex, str):
     match_obj = re.search(regex, str)
     if(match_obj != None):
@@ -11,7 +11,7 @@ def match(regex, str):
 def bytes_to_string(*args):
     list = [] 
     for b in args:
-        list.append(b.decode('UTF-8').rstrip('\n'))
+        list.append(b.decode('UTF-8'))
     return tuple(list)
 
 def command_message(issue, commands):
@@ -25,6 +25,8 @@ def ask_ray(issue):
 
 def get_line(str):
     index = str.find("\n")
+    if index == -1:
+        print(str)
     return str if index == -1 else str[:index + 1]
 
 def extract(answer, cur_line, k, key):
@@ -52,6 +54,14 @@ def extract(answer, cur_line, k, key):
 
     return result
 
+# maps personal info keys to their respective regex patterns
+stored_answers = dict()
+f = open('/home/bgg646/feedback/stored_answers.txt', 'r')
+import re
+for line in f.readlines():
+    key, regex_value = re.split("~~~", line)
+    stored_answers[key] = (False, regex_value)
+
 def use_stored_answer(answer, cur_line):
     keys = re.findall("<r>.*?</r>", answer)
     for k in keys:
@@ -70,21 +80,28 @@ def cleared(expected, output):
     cur_line = get_line(output)
     # TODO: ensure they are outputting a valid output
     expected = use_stored_answer(expected, cur_line)
-    if(expected == "\n"):
-        p_expected = "a blank line"
-    if(cur_line == "\n"):
-        p_cur_line = "a blank line"
-    else:
-        p_expected = "\"" + expected.strip() + "\""
-        p_cur_line = "\"" + cur_line.strip()     + "\""
-
     if(match(expected, cur_line)):                
         output = output[len(cur_line):]
-        print("cleared. You successfully outputted", p_expected)
         return output
     else:
+        if(expected == "\n"):
+            expected = "a blank line"
+        if(cur_line == "\n"):
+            cur_line = "a blank line"
         # TODO make regex expression human readable.
             # consider using an array to store what the regex is supposed to represent
-        print("\n\n" + p_expected + " must be printed.")
-        print(p_cur_line + " is what you're printing\n\n")
+        print("\n\nYour output preceding this line is correct.\n")
+        print("But now you must fix this issue:")
+        print("\"" + expected.rstrip("\n") + "\" must be printed.")
+        print("\"" + cur_line.rstrip("\n") + "\" is what you're printing\n\n")
         return False
+
+# global variables
+# TODO: fill in correct usr
+usr = "bgg646"
+correct_pwd = "/home/" + usr + "/lab0-part2"
+script_path = correct_pwd + "/Your_script/your_script.py"
+import subprocess
+p = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+o, e = p.communicate() 
+output, error = bytes_to_string(o, e)
